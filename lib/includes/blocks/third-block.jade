@@ -1,0 +1,23 @@
+#third-block
+  .container#phoneform
+    .row
+      img(src="assets/images/couple.png")
+      .img.background-size.col-sm-6.col-sm-offset-3(style="background-image:url('assets/images/iphone.png');")
+        p ¿Te gustaría probar Lovster? Apúntate a nuestra lista de espera.
+        form(role="form")
+          .form-group
+            input.form-control#formName(type="text",placeholder="Nombre y apellidos")
+          .form-group
+            input.form-control#formEmail(type="email",placeholder="Tu email")
+          .form-group
+            .row
+              .col-xs-5
+                input.form-control#formEmail(type="text",placeholder="Tu edad")
+              .col-xs-7
+                input.form-control#formEmail(type="text",placeholder="Sexo")
+          button.btn.btn-block.btn-pink(type="submit") Quiero jugar
+      .col-sm-3
+        .logo
+          h1 Lovster
+          h5 play the game
+  .row#floor
