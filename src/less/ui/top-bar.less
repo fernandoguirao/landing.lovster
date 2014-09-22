@@ -15,4 +15,19 @@ nav.navbar.navbar-fixed-top {
       font-weight: @medium;
     } 
   }
+  @media(max-width:@screen-sm-min) {
+    .navbar-header {
+      float:left;
+    }
+    .navbar-right {
+      float:right;
+      margin-right:2px;
+    }
+    li {
+      display:inline-block;
+    }
+  }
+  @media(max-width:@screen-xs-max){
+    position: absolute;
+  }
 }

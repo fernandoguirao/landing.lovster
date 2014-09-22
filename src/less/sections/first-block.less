@@ -42,12 +42,44 @@
       height: inherit;
       position: absolute;
       left: 0;
-      top: 0;
+      top: -352px;
       // margin-top:-34px;
+    }
+    @media(max-width:@screen-xs-max) {
+      margin-top:74px;
+      .contents {
+        h1 {
+          font-size:58px;
+          margin-top:0;
+        }
+        button.btn {
+          padding: 14px 40px;
+        }
+      }
+      img {
+        left: -50%;
+        top: -347px;
+        opacity: 0.5;
+        width:200%;
+      }
+    }
+    @media(max-width:@screen-xs-min){
+      button {
+        display: block;
+        width: 100%;
+      }
     }
   }
   #notifications {
     margin-bottom:180px;
+    .avatar-left .img {
+      float: right;
+      margin-right: 2%;
+    }
+    .avatar-right .img {
+      float: left;
+      margin-left: 2%;
+    }
     .img {
       width: 170px;
       height: 170px;
@@ -81,8 +113,87 @@
         width:90px;
         height:90px;
         border:3px solid @soft-gray;
-        margin-left: -30px;
+        margin: 0 auto;
       }
+    }
+  }
+  @media(max-width:@screen-sm-max){
+    #notifications {
+      .img {
+        width:120px;
+        height:120px;
+      }
+      .popover {
+        margin-top:0;
+        .img {
+          width:81px;
+          height: 81px;
+          margin-top: 4px;
+        }
+      }
+      margin-bottom: 82px;
+    }
+  }
+  @media(max-width:@screen-xs-max){
+    h4 {
+      font-size: 20px!important;
+    }
+    #notifications {
+      .img {
+        width: 60px;
+        height: 60px;
+      }
+      .popover {
+        margin-top:-15px;
+        .popover-content {
+          padding-left:24px;
+          p {
+            font-size:20px;
+            height:60px;
+          }
+          .img {
+            width: 50px;
+            height: 50px;
+            margin-left: -22px;
+          }
+        }
+      }
+    }
+  }
+  @media(max-width:@screen-xs-min){
+    #call {
+      padding:0 20px;
+      margin-bottom: 93px;
+    }
+    #notifications {
+      .img {
+        width: 50px;
+        height: 50px;
+      }
+      .avatar-left .img {
+        margin-right: -22%;
+      }
+      .avatar-right .img {
+        float: left;
+        margin-left: -22%;
+      }
+      .popover {
+        // margin-top:-15px;
+        .popover-content {
+          padding-left:15px;
+          .col-xs-10 {
+            width:100%;
+            p {
+              font-size:18px;
+              text-align: center;
+            }
+          }
+          .col-xs-2 {
+            display: none;
+          }
+        }
+      }
+
     }
   }
 }

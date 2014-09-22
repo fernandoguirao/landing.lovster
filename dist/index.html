@@ -20,9 +20,9 @@
   <div class="container">
     <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="" class="bone-font">Cómo funciona</a></li>
+      <li class="hidden-xs"><a href="" class="bone-font">Cómo funciona</a></li>
       <li>
-        <button type="button" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
+        <button type="button" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></button>
       </li>
     </ul>
   </div>
@@ -38,38 +38,37 @@
     <div id="shadow-2" class="shadow"></div>
     <div id="shadow-3" class="shadow"></div>
   </div>
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-12 col-md-offset-1 col-md-11">
     <div id="call" class="row">
-      <div class="col-xs-6 col-xs-offset-3">
-        <div class="contents">
-          <h3>Ligar es un juego</h3>
-          <h1>Diviértete</h1>
-          <h4>Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
-          <button type="button" class="btn btn-bordered uppercase">Cómo funciona</button>
-          <button type="button" class="btn btn-pink uppercase">Quiero jugar</button>
-        </div><img src="assets/images/hearth.png" alt="">
+      <div class="contents">
+        <h3>Ligar es un juego</h3>
+        <h1>Diviértete</h1>
+        <h4>Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
+        <button type="button" class="btn btn-bordered uppercase">Cómo funciona</button>
+        <button type="button" class="btn btn-pink uppercase">Quiero jugar</button>
       </div>
+      <div class="col-xs-6 col-xs-offset-3"><img src="assets/images/hearth.png" alt=""></div>
     </div>
     <div id="notifications" class="row">
-      <div class="col-xs-3">
+      <div class="col-xs-2 col-sm-3 avatar-left">
         <div style="background-image:url('assets/images/avatar-girl.jpg');" class="img img-circle"></div>
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-8 col-sm-6">
         <div role="tooltip" class="popover fade right in show">
           <div class="arrow"></div>
           <div class="popover-content">
             <div class="row">
-              <div class="col-xs-9">
+              <div class="col-xs-10 col-sm-8 col-md-8 col-lg-9">
                 <p> <span>Anna </span>está jugando a <span>STAR MATCH SAGA</span></p>
               </div>
-              <div class="col-xs-3">
+              <div class="col-xs-2 col-sm-4 col-md-4 col-lg-3">
                 <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-2 col-sm-3 avatar-right">
         <div style="background-image:url('assets/images/avatar-boy.jpg');" class="img img-circle"></div>
       </div>
     </div>
@@ -109,8 +108,8 @@
     <div id="shadow-3" class="shadow"></div>
   </div>
   <div id="phoneform" class="container">
-    <div class="row"><img src="assets/images/couple.png">
-      <div style="background-image:url('assets/images/iphone.png');" class="img background-size col-sm-6 col-sm-offset-3">
+    <div class="row"><img src="assets/images/couple.png" class="hidden-xs hidden-sm">
+      <div style="background-image:url('assets/images/iphone.png');" class="img background-size col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <p>¿Te gustaría probar Lovster? Apúntate a nuestra lista de espera.</p>
         <form role="form">
           <div class="form-group">
@@ -132,7 +131,7 @@
           <button type="submit" class="btn btn-block btn-pink">Quiero jugar</button>
         </form>
       </div>
-      <div class="col-sm-3">
+      <div class="col-sm-3 col-r hidden-xs hidden-sm">
         <div class="logo">
           <h1>Lovster</h1>
           <h5>play the game</h5>
@@ -140,7 +139,7 @@
       </div>
     </div>
   </div>
-  <div id="floor" class="row"></div>
+  <div id="floor" class="row hidden-sm hidden-xs"></div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>

@@ -14,6 +14,15 @@
     background-position:top;
     text-align: center;
     padding: 207px 120px 50px;
+    @media(max-width:@screen-md-max){
+      padding:198px 91px 50px;
+    }
+    @media(max-width:@screen-sm-max){
+      padding:195px 96px 50px!important;
+    }
+    @media(max-width:@screen-xs-max){
+      padding:37% 15% 50px!important;
+    }
     input {
       padding: 25px 17px;
       font-size:20px;
@@ -42,8 +51,12 @@
   }
   .logo {
     position: absolute;
-    right: -18%;
-    bottom:-77px;
+    right: 0;
+    bottom:0;
+    @media(max-width:@screen-md-max){
+      h1 { font-size:67px; }
+      h5 { font-size:23px; }
+    }
   }
   .col-sm-3 {
     padding-top: 431px;
@@ -60,5 +73,8 @@
     margin-top: -80px;
     position: relative;
     border-bottom: 40px solid #235D74;
+  }
+  .col-r {
+    height:600px;
   }
 }
