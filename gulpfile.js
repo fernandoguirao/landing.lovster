@@ -31,7 +31,15 @@ gulp.task('less', function() {
   .pipe(browserSync.reload({stream:true}))
   .pipe(notify({ message: 'less compiled' }));
 });
- 
+
+// JAVASCRIPT
+
+gulp.task('js', function() {
+  gulp.src('./src/js/app.js')
+  .pipe(gulp.dest('./dist/assets/js/'))
+  .pipe(browserSync.reload({stream:true}))
+  .pipe(notify({ message: 'js loaded' }));
+});
 
 // JADE
 
@@ -70,7 +78,7 @@ gulp.task('watch', ['browser-sync'], function() {
   // Watch Sass files
   gulp.watch('./src/less/**/*', ['less']);
   // Watch JS files
-  // gulp.watch('src/js/**/*', ['js']);
+  gulp.watch('src/js/**/*', ['js']);
 
   // Watch image files
   // gulp.watch('src/images/raster/*', ['images']);
@@ -90,4 +98,4 @@ gulp.task('browser-sync', function() {
 
 // DEFAULTS
 
-gulp.task('default', ['less','jade','imagemin','watch','browser-sync']);
+gulp.task('default', ['less','js','jade','imagemin','watch','browser-sync']);

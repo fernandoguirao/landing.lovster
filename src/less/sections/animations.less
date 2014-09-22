@@ -1,0 +1,16 @@
+@keyframes l-fadein {
+	0% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@keyframes l-scale {
+	0% { .scale(0); }
+	100% { .scale(1); }
+}
+
+.scale-fade-animation {
+	.transition(opacity,2s);
+	animation:
+		l-fadein 2s,
+		l-scale 2s;
+}

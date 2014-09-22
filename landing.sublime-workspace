@@ -79,8 +79,8 @@
 			"file": "lib/includes/foot.jade",
 			"settings":
 			{
-				"buffer_size": 681,
-				"line_ending": "Unix"
+				"buffer_size": 720,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -274,14 +274,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster",
-		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster/dist/assets",
-		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster/dist/assets/js",
-		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster/src/bower_components/jquery",
-		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster/src/bower_components/jquery/dist"
-	],
 	"file_history":
 	[
 		"/Users/fernandoguirao/Dropbox/Bueninvento/Proyectos/01 Activos/Lovster/Development/landing.lovster/lib/includes/foot.jade",
@@ -415,7 +407,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -755,15 +747,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 681,
+						"buffer_size": 720,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								681,
-								681
+								0,
+								0
 							]
 						],
 						"settings":
@@ -782,7 +774,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -838,7 +830,7 @@
 	"project": "landing.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
