@@ -41,6 +41,13 @@ gulp.task('js', function() {
   .pipe(notify({ message: 'js loaded' }));
 });
 
+// PHP
+
+gulp.task('php', function() {
+  gulp.src('./lib/scripts/*.php')
+  .pipe(gulp.dest('./dist/scripts/'));
+});
+
 // JADE
 
 gulp.task('jade', function() {
@@ -98,4 +105,4 @@ gulp.task('browser-sync', function() {
 
 // DEFAULTS
 
-gulp.task('default', ['less','js','jade','imagemin','watch','browser-sync']);
+gulp.task('default', ['less','js','jade','imagemin','php','watch','browser-sync']);
