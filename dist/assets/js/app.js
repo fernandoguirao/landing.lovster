@@ -17,10 +17,10 @@ function getParameterByName(name) {
 var getemail = getParameterByName('email');
 
 if (getemail == 'success'){
-	$('#modalSuccess').modal('toggle')
+	$('#modalSuccess').modal('toggle');
 }
 
 if (getemail == 'fail'){
-	// Open modal
+	$('#modalFail').modal('toggle');
 }
 

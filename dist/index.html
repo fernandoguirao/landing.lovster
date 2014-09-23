@@ -20,7 +20,7 @@
   <div class="container">
     <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
     <ul class="nav navbar-nav navbar-right">
-      <li class="hidden-xs"><a href="" class="bone-font">Cómo funciona</a></li>
+      <li class="hidden-xs"><a href="#modalInstructions" data-toggle="modal" class="bone-font">Cómo funciona</a></li>
       <li>
         <button type="button" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></button>
       </li>
@@ -31,15 +31,49 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
       </div>
       <div class="modal-body">
-        <p>One fine body…</p>
+        <h3>Gracias por registrarte en Lovster</h3>
+        <p>Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla</p>
       </div>
       <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
+      </div>
+      <div class="modal-body">
+        <h3>Gracias por registrarte en Lovster</h3>
+        <p>Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalInstructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
+      </div>
+      <div class="modal-body">
+        <h3>Gracias por registrarte en Lovster</h3>
+        <p>Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
       </div>
     </div>
   </div>
@@ -79,8 +113,7 @@
         <h1 id="title-2" class="scale-fade-animation">Diviértete</h1>
         <h4 class="ui-fade">Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
         <div class="buttons ui-fade">
-          <button type="button" class="btn btn-bordered uppercase">Cómo funciona</button>
-          <button type="button" class="btn btn-pink uppercase">Quiero jugar</button>
+          <button type="button" data-toggle="modal" data-target="#modalInstructions" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#third-block" class="btn btn-pink uppercase">Quiero jugar</a>
         </div>
       </div>
       <div class="col-xs-6 col-xs-offset-3"><img id="hearth" src="assets/images/hearth.png" alt=""></div>

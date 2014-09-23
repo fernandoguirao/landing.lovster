@@ -32,8 +32,8 @@ main#first-block
           br
           | donde el premio es encontrar pareja
         .buttons.ui-fade
-          button.btn.btn-bordered.uppercase(type="button") Cómo funciona
-          button.btn.btn-pink.uppercase(type="button") Quiero jugar
+          button.btn.btn-bordered.uppercase(type="button",data-toggle="modal",data-target="#modalInstructions") Cómo funciona
+          a.btn.btn-pink.uppercase(href="#third-block") Quiero jugar
       .col-xs-6.col-xs-offset-3
         img#hearth(src="assets/images/hearth.png",alt="")
   include ./notifications.jade
