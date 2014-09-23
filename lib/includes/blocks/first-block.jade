@@ -7,7 +7,7 @@ main#first-block
     #shadow-1.shadow
     #shadow-2.shadow
     #shadow-3.shadow
-  #balloons.hidden-xs
+  #balloons.globus.hidden-xs
     .col-xs-4
       .img.img-circle(data-balloon="1" style="background-image:url('assets/images/sprites/01.png');")
       .img.img-circle(data-balloon="2" style="background-image:url('assets/images/sprites/02.png');")
@@ -24,33 +24,17 @@ main#first-block
 
 
   .col-xs-12.col-md-offset-1.col-md-10
-    .row#call
+    .row.opacidade#call
       .contents
-        h3 Ligar es un juego
-        h1.scale-fade-animation Diviértete
-        h4 Lovster es una plataforma de juegos
+        h3#title Ligar es un juego
+        h1#title-2.scale-fade-animation Diviértete
+        h4.ui-fade Lovster es una plataforma de juegos
           br
           | donde el premio es encontrar pareja
-        .buttons
+        .buttons.ui-fade
           button.btn.btn-bordered.uppercase(type="button") Cómo funciona
           button.btn.btn-pink.uppercase(type="button") Quiero jugar
       .col-xs-6.col-xs-offset-3
-        img(src="assets/images/hearth.png",alt="")
-    .row#notifications
-      .col-xs-2.col-sm-3.avatar-left
-        .img.img-circle(style="background-image:url('assets/images/avatar-girl.jpg');")
-      .col-xs-8.col-sm-6
-        .popover.fade.right.in.show(role="tooltip")
-          .arrow
-          .popover-content
-            .row
-              .col-xs-10.col-sm-8.col-md-8.col-lg-9
-                p 
-                  span Anna 
-                  | está jugando a 
-                  span STAR MATCH SAGA
-              .col-xs-2.col-sm-4.col-md-4.col-lg-3
-                .img.img-circle(style="background-image:url('assets/images/star-screen.jpg');")
-      .col-xs-2.col-sm-3.avatar-right
-        .img.img-circle(style="background-image:url('assets/images/avatar-boy.jpg');")
+        img#hearth(src="assets/images/hearth.png",alt="")
+  include ./notifications.jade
   .clearfix

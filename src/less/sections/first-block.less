@@ -5,8 +5,12 @@
   overflow:hidden;
   #call {
     text-align: center;
-    margin-top:154px;
+    margin-top:91px;
     margin-bottom:180px;
+    @media(max-height:598px){
+      margin-top:40px;
+    }
+    
     .contents {
       position: relative;
       z-index: 1;
@@ -90,12 +94,30 @@
     }
     .popover {
       position: relative;
-      width:100%;
+      width:initial;
       margin-top: 16px;
       margin-left:-1px;
-      max-width: none;
+      max-width: 441px;
+      &.left {
+        float:right;
+        @media(max-width:@screen-xs-max){
+          .img {
+            margin-left:22px!important;
+          }
+        }
+      }
+      &.right {
+        p {
+          padding-left:25px;
+        }
+      }
       .popover-content {
         padding:14px 14px 14px 37px;
+      }
+      .table-cell {
+        display:table-cell;
+        padding-right: 21px;
+        vertical-align: middle;
       }
       p {
         font-size:24px;
@@ -106,6 +128,8 @@
         display: table-cell;
         overflow: hidden;
         line-height: 1.3;
+        padding-right: 21px;
+        
         span {
           color:@pink;
           font-weight:@bold;

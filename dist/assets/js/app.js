@@ -1,88 +1,26 @@
-/*var ligar = $('#first-block #call h3'),
-	diviertete = $('#first-block #call h1'),
-	descripcion = $('#first-block #call h4'),
-	hearth = $('#first-block #call img'),
-	buttons = $('#first-block #call .buttons'),
-	topbar = $('.navbar-fixed-top'),
-	notificaciones = $('#first-block #notifications');
+$('.carousel').carousel({
+  interval: 4300
+})
 
-$(document).ready(function(){
+var hsize = $(window).height();
+$('#first-block').css({'min-height':hsize+150});
 
-	ligar.addClass('invisible');
-	diviertete.addClass('invisible');
-	descripcion.addClass('invisible');
-	buttons.addClass('invisible');
-	hearth.addClass('invisible');
-	notificaciones.addClass('invisible');
-	topbar.addClass('invisible');
-	$('#balloons .img').each(function(){
-		$(this).addClass('invisible');
-	})
-	
-	setTimeout(function() {
-		ligar.removeClass('invisible');
-    	ligar.addClass('fade in');
-	}, 1000);
+// GET email
 
-	setTimeout(function() {
-		diviertete.removeClass('invisible');
-    	diviertete.addClass('fade in');
-	}, 1500);
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
-	setTimeout(function() {
-		descripcion.removeClass('invisible');
-    	descripcion.addClass('fade in');
-	}, 2000);
+var getemail = getParameterByName('email');
 
-	setTimeout(function() {
-		hearth.removeClass('invisible');
-    	hearth.addClass('fade in');
-	}, 2500);
+if (getemail == 'success'){
+	$('#modalSuccess').modal('toggle')
+}
 
-	setTimeout(function() {
-		buttons.removeClass('invisible');
-    	buttons.addClass('fade in');
-	}, 3100);
+if (getemail == 'fail'){
+	// Open modal
+}
 
-	setTimeout(function() {
-		notificaciones.removeClass('invisible');
-    	notificaciones.addClass('fade in');
-	}, 3300);
-
-	setTimeout(function() {
-		topbar.removeClass('invisible');
-    	topbar.addClass('fade in');
-	}, 3200);
-
-	setTimeout(function() {
-		$('#balloons .img').each(function(index){
-			var self = this
-	    	setTimeout(function () {
-	            $(self).removeClass('invisible');
-	    		$(self).addClass('fade in');
-	    	}, index*500);
-		});
-	}, 1200);*/
-
-	// GLOBOS
-
-	
-	
-	/*En este orden hacemos que aparezcan los elementos
-			interfaz
-
-		FADE
-			ligar es un juego / resto de juegos en orden
-			diviértete
-		FADE + SCALE
-			corazón
-
-		FADE
-			descripción
-			notificaciones
-
-	Otros efectos
-	Corazón latiendo
-	Botones efectos especiales*/
-
-});

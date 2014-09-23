@@ -16,7 +16,7 @@
     </p><![endif]-->
   </body>
 </html>
-<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+<nav role="navigation" class="navbar navbar-default navbar-fixed-top ui-fade">
   <div class="container">
     <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
     <ul class="nav navbar-nav navbar-right">
@@ -27,6 +27,23 @@
     </ul>
   </div>
 </nav>
+<div id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 <main id="first-block">
   <div class="sky">
     <div class="stars"></div>
@@ -38,7 +55,7 @@
     <div id="shadow-2" class="shadow"></div>
     <div id="shadow-3" class="shadow"></div>
   </div>
-  <div id="balloons" class="hidden-xs">
+  <div id="balloons" class="globus hidden-xs">
     <div class="col-xs-4">
       <div data-balloon="1" style="background-image:url('assets/images/sprites/01.png');" class="img img-circle"></div>
       <div data-balloon="2" style="background-image:url('assets/images/sprites/02.png');" class="img img-circle"></div>
@@ -56,39 +73,59 @@
     </div>
   </div>
   <div class="col-xs-12 col-md-offset-1 col-md-10">
-    <div id="call" class="row">
+    <div id="call" class="row opacidade">
       <div class="contents">
-        <h3>Ligar es un juego</h3>
-        <h1 class="scale-fade-animation">Diviértete</h1>
-        <h4>Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
-        <div class="buttons">
+        <h3 id="title">Ligar es un juego</h3>
+        <h1 id="title-2" class="scale-fade-animation">Diviértete</h1>
+        <h4 class="ui-fade">Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
+        <div class="buttons ui-fade">
           <button type="button" class="btn btn-bordered uppercase">Cómo funciona</button>
           <button type="button" class="btn btn-pink uppercase">Quiero jugar</button>
         </div>
       </div>
-      <div class="col-xs-6 col-xs-offset-3"><img src="assets/images/hearth.png" alt=""></div>
+      <div class="col-xs-6 col-xs-offset-3"><img id="hearth" src="assets/images/hearth.png" alt=""></div>
     </div>
-    <div id="notifications" class="row">
-      <div class="col-xs-2 col-sm-3 avatar-left">
-        <div style="background-image:url('assets/images/avatar-girl.jpg');" class="img img-circle"></div>
-      </div>
-      <div class="col-xs-8 col-sm-6">
-        <div role="tooltip" class="popover fade right in show">
-          <div class="arrow"></div>
-          <div class="popover-content">
-            <div class="row">
-              <div class="col-xs-10 col-sm-8 col-md-8 col-lg-9">
-                <p> <span>Anna </span>está jugando a <span>STAR MATCH SAGA</span></p>
-              </div>
-              <div class="col-xs-2 col-sm-4 col-md-4 col-lg-3">
-                <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+  </div>
+  <div id="notifications" class="row ui-fade">
+    <div data-ride="carousel" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="col-xs-2 col-sm-3 avatar-left">
+            <div style="background-image:url('assets/images/avatar-girl2.jpg');" class="img img-circle"></div>
+          </div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade right in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <p> <span>Anna </span>está jugando a <span>STAR MATCH SAGA</span></p>
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-xs-2 col-sm-3 avatar-right">
-        <div style="background-image:url('assets/images/avatar-boy.jpg');" class="img img-circle"></div>
+        <div class="item">
+          <div class="col-xs-0 col-sm-3 avatar-left"></div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade left in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                  </div>
+                  <p> <span>Roberto </span>ha añadido un nuevo contacto <span>STAR MATCH SAGA</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-sm-3 avatar-right">
+            <div style="background-image:url('assets/images/avatar-boy2.jpg');" class="img img-circle"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -130,24 +167,30 @@
     <div class="row"><img src="assets/images/couple.png" class="hidden-xs hidden-sm">
       <div style="background-image:url('assets/images/iphone.png');" class="img background-size col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <p>¿Te gustaría probar Lovster? Apúntate a nuestra lista de espera.</p>
-        <form role="form">
+        <form role="form" action="inc/mcapi_listSubscribe.php" method="get">
+          <input type="hidden" name="ajax" value="true">
           <div class="form-group">
-            <input id="formName" type="text" placeholder="Nombre y apellidos" class="form-control">
+            <input id="MERGE1" type="text" name="MERGE1" placeholder="Nombre y apellidos" class="form-control">
           </div>
           <div class="form-group">
-            <input id="formEmail" type="email" placeholder="Tu email" class="form-control">
+            <input id="MERGE2" placeholder="Tu email" type="email" autocapitalize="off" autocorrect="off" name="MERGE2" size="25" value="" class="form-control">
           </div>
           <div class="form-group">
             <div class="row">
               <div class="col-xs-5">
-                <input id="formEmail" type="text" placeholder="Tu edad" class="form-control">
+                <input id="MERGE3" type="text" name="MERGE3" placeholder="Tu edad" class="form-control">
               </div>
               <div class="col-xs-7">
-                <input id="formEmail" type="text" placeholder="Sexo" class="form-control">
+                <input id="MERGE4" type="text" name="MERGE4" placeholder="Sexo" class="form-control">
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-block btn-pink">Quiero jugar</button>
+          <div class="hidden-from-view hidden">
+            <input type="text" name="honeypot" tabindex="-1" value="">
+          </div>
+          <div class="submit_container clear">
+            <button type="submit" name="submit" class="btn btn-block btn-pink">Quiero jugar</button>
+          </div>
         </form>
       </div>
       <div class="col-sm-3 col-r hidden-xs hidden-sm">

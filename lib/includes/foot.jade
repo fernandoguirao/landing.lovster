@@ -14,3 +14,18 @@ script(src='assets/js/app.js')
     ga('create','UA-XXXXX-X');ga('send','pageview');
 
 script(src='assets/js/retina.min.js')
+//-
+  script.
+    $(document).ready(function() {
+      $('#signup').submit(function() {
+        $("#message").html("Adding your email address...");
+        $.ajax({
+          url: 'inc/store-address.php', // proper url to your "store-address.php" file
+          data: $('#signup').serialize(),
+          success: function(msg) {
+            $('#message').html(msg);
+          }
+        });
+        return false;
+      });
+    });

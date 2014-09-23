@@ -1,16 +1,91 @@
-@keyframes l-fadein {
-	0% { opacity: 0; }
-	100% { opacity: 0; }
+.lh-keyframes(~'latir, 0%{ transform: scale(.95); } 100%{ transform: scale(1); }');
+.lh-keyframes(~'hearthin, 0%{ transform: scale(.4); opacity:0; } 100%{ transform: scale(.95); opacity:1; }');
+.lh-keyframes(~'fadein, 0%{ opacity:0; transform: scale(.9); } 100%{ opacity:1;transform: scale(1); }');
+.lh-keyframes(~'globan, 0%{ opacity:0; transform: scale(.9); } 100%{ opacity:.2;transform: scale(1); }');
+.lh-keyframes(~'fade, 0%{ opacity:0; } 100%{ opacity:1; }');
+
+// cubic-bezier(.92,.22,.74,.84)
+
+#title {
+  .opacity(0);
+  .lh-animation(fadein 1.7s  ease-out forwards);
 }
 
-@keyframes l-scale {
-	0% { .scale(0); }
-	100% { .scale(1); }
+#title-2 {
+  .opacity(0);
+  .lh-animation(fadein .7s 1s ease-in forwards);
 }
 
-.scale-fade-animation {
-	.transition(opacity,2s);
-	animation:
-		l-fadein 2s,
-		l-scale 2s;
+#hearth {
+  .opacity(0);
+ .lh-animation(hearthin 1s 2s  cubic-bezier(.92,.22,.74,.84) forwards, latir 1s 2s cubic-bezier(0.5, 0.2, 0.3, 1.0) infinite alternate);
+}
+
+.globus {
+  .opacity(0)!important;
+  .lh-animation(globan 3s 3s cubic-bezier(.92,.22,.74,.84) forwards);
+}
+
+
+.ui-fade {
+  .opacity(0);
+  .lh-animation(fade 1s 2.8s cubic-bezier(.92,.22,.74,.84) forwards);
+}
+
+// CAROUSEL
+
+.carousel-fade {
+  position: fixed;
+  width: 100%;
+  bottom: 160px;
+  @media(min-height:598px){
+    bottom:180px;
+  }
+  @media(max-height:540px){
+    position:relative;
+    margin-top: 629px;
+  }
+  .carousel-inner {
+    overflow:inherit;
+    /*margin-top:548px;
+    @media(max-width:@screen-xs-max){
+      margin-top: 475px;
+    }*/
+    .item {
+      opacity: 0;
+      top:-40px;
+      left:0;
+      width:100%;
+      .scale(.7);
+      .lh-transition(all .6s cubic-bezier(.92,.22,.74,.84));
+      position: absolute;
+    }
+
+    .active {
+      opacity: 1;
+      left:0;
+      top:0;
+      .scale(.8);
+      left:0;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      top:10px;
+      opacity: 0;
+      z-index: 1;
+      .scale(1.1);
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 0;
+      left:0;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
 }
