@@ -10,9 +10,9 @@ $merge_vars = array('FNAME'=>$_GET['MERGE1'], 'MMERGE3'=>$_GET['MERGE3'], 'MMERG
 $retval = $api->listSubscribe( $listId, $_GET['MERGE2'], $merge_vars,'html', false );
 
 if ($api->errorCode){
-  header( 'Location: http://localhost:3000/?register=fail' ) ;
+  header( 'Location: http://lovster.co/?register=fail' ) ;
 } else {
-    header( 'Location: http://localhost:3000/?register=success' ) ;
+    header( 'Location: http://lovster.co/?register=success' ) ;
 }
 
 ?>

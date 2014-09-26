@@ -14,7 +14,7 @@ function getParameterByName(name) {
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-var getemail = getParameterByName('email');
+var getemail = getParameterByName('register');
 
 if (getemail == 'success'){
 	$('#modalSuccess').modal('toggle');

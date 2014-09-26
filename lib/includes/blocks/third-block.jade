@@ -12,19 +12,20 @@
     .row
       img.hidden-xs.hidden-sm(src="assets/images/couple.png")
       .img.background-size.col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3(style="background-image:url('assets/images/iphone.png');")
-        p ¿Te gustaría probar Lovster? Apúntate a nuestra lista de espera.
+        p ¿Quieres ser el primero en probar Lovster y recibir un obsequio exclusivo en el juego? Déjanos tu correo y te enviaremos una invitación.
         form(role='form',action='scripts/mcapi_listSubscribe.php', method='get')
           input(type='hidden', name='ajax', value='true')
           .form-group
             input.form-control#MERGE1(type="text",name='MERGE1',placeholder="Nombre y apellidos")
           .form-group
             input#MERGE2.form-control(placeholder="Tu email",type='email', autocapitalize='off', autocorrect='off', name='MERGE2', size='25', value='')
-          .form-group
-            .row
-              .col-xs-5
-                input.form-control#MERGE3(type="text",name='MERGE3',placeholder="Tu edad")
-              .col-xs-7
-                input.form-control#MERGE4(type="text",name='MERGE4',placeholder="Sexo")
+          //-
+            .form-group
+              .row
+                .col-xs-5
+                  input.form-control#MERGE3(type="text",name='MERGE3',placeholder="Tu edad")
+                .col-xs-7
+                  input.form-control#MERGE4(type="text",name='MERGE4',placeholder="Sexo")
           .hidden-from-view.hidden
             input(type='text', name='honeypot', tabindex='-1', value='')
           .submit_container.clear
