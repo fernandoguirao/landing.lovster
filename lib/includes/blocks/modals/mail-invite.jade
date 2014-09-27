@@ -1,4 +1,4 @@
-.modal.fade#modalFail(tabindex="-1",role="dialog", aria-labelledby="myModalLabel",aria-hidden="true")
+.modal.fade#modalInvite(tabindex="-1",role="dialog", aria-labelledby="myModalLabel",aria-hidden="true")
   .modal-dialog
     .modal-content
       .modal-header.background-size(style="background-image:url('assets/images/lovster-bckg.jpg');")
@@ -6,10 +6,9 @@
           span(aria-hidden='true') ×
           span.sr-only Cerrar
       .modal-body
-        h3 Oh, no!
-        p Por lo visto ha habido un error en tu registro, por favor vuelve a intentarlo comprobando que tu correo sea correcto. ¡Gracias!
         .row
           .col-xs-12.col-sm-10.col-sm-offset-1.col-md-10.col-md-offset-1
+            p ¿Quieres ser el primero en probar Lovster y recibir un obsequio exclusivo en el juego? Déjanos tu correo y te enviaremos una invitación.
             form(role='form',action='scripts/mcapi_listSubscribe.php', method='get')
               input(type='hidden', name='ajax', value='true')
               .form-group

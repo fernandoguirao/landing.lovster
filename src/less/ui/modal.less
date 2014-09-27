@@ -6,6 +6,10 @@
         background-color:@dark-blue;
         padding-top: 40px;
         padding-bottom: 40px;
+        &.background-size {
+          .background-size(cover);
+          min-height:163px;
+        }
         .img {
           width: 90px;
           height: 90px;
@@ -23,6 +27,16 @@
       .modal-body {
         padding:15px 64px;
         background-color: @bone;
+        .form-control {
+          font-size: 18px;
+          height:52px;
+        }
+        form {
+          .btn {
+            font-size: 18px;
+            padding: 10px 31px;
+          }
+        }
         h3 {
           font-weight: bold;
           font-size: 29px;

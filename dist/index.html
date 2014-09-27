@@ -21,23 +21,22 @@
     <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
     <ul class="nav navbar-nav navbar-right">
       <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" class="bone-font">Cómo funciona</a></li>
-      <li><a href="#third-block" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></a></li>
+      <li><a href="#modalInvite" data-toggle="modal" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></a></li>
     </ul>
   </div>
 </nav>
 <div id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div style="background-image:url('assets/images/lovster-bckg.jpg');" class="modal-header background-size">
         <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
-        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
       </div>
       <div class="modal-body">
-        <h3>Gracias por registrarte en Lovster</h3>
-        <p>Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla</p>
+        <h3>¡Gracias!</h3>
+        <p>Te hemos incluido en la lista de espera de usuarios de Lovster. En cuanto nuestra plataforma esté disponible o tengamos novedades te enviaremos un email para avisarte.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">¡Entendido!</button>
       </div>
     </div>
   </div>
@@ -45,16 +44,35 @@
 <div id="modalFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div style="background-image:url('assets/images/lovster-bckg.jpg');" class="modal-header background-size">
         <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
-        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
       </div>
       <div class="modal-body">
-        <h3>Gracias por registrarte en Lovster</h3>
-        <p>Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
+        <h3>Oh, no!</h3>
+        <p>Por lo visto ha habido un error en tu registro, por favor vuelve a intentarlo comprobando que tu correo sea correcto. ¡Gracias!</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+            <form role="form" action="scripts/mcapi_listSubscribe.php" method="get">
+              <input type="hidden" name="ajax" value="true">
+              <div class="form-group">
+                <input id="MERGE1" type="text" name="MERGE1" placeholder="Nombre y apellidos" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="MERGE2" placeholder="Tu email" type="email" autocapitalize="off" autocorrect="off" name="MERGE2" size="25" value="" class="form-control">
+              </div>
+              <div class="hidden-from-view hidden">
+                <input type="text" name="honeypot" tabindex="-1" value="">
+              </div>
+              <div class="submit_container clear">
+                <button type="submit" name="submit" class="btn pull-right btn-pink">Quiero jugar</button>
+                <div class="clearfix"></div>
+              </div>
+              <div class="row">
+                <button data-dismiss="modal" class="btn not-btn pull-right btn-default">De momento no, cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -105,6 +123,42 @@
       <div class="modal-footer">
         <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" class="btn btn-default btn-lg">Atrás</button>
         <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInvite" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalInvite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div style="background-image:url('assets/images/lovster-bckg.jpg');" class="modal-header background-size">
+        <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+            <p>¿Quieres ser el primero en probar Lovster y recibir un obsequio exclusivo en el juego? Déjanos tu correo y te enviaremos una invitación.</p>
+            <form role="form" action="scripts/mcapi_listSubscribe.php" method="get">
+              <input type="hidden" name="ajax" value="true">
+              <div class="form-group">
+                <input id="MERGE1" type="text" name="MERGE1" placeholder="Nombre y apellidos" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="MERGE2" placeholder="Tu email" type="email" autocapitalize="off" autocorrect="off" name="MERGE2" size="25" value="" class="form-control">
+              </div>
+              <div class="hidden-from-view hidden">
+                <input type="text" name="honeypot" tabindex="-1" value="">
+              </div>
+              <div class="submit_container clear">
+                <button type="submit" name="submit" class="btn pull-right btn-pink">Quiero jugar</button>
+                <div class="clearfix"></div>
+              </div>
+              <div class="row">
+                <button data-dismiss="modal" class="btn not-btn pull-right btn-default">De momento no, cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -144,7 +198,7 @@
         <h1 id="title-2" class="scale-fade-animation">Diviértete</h1>
         <h4 class="ui-fade">Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
         <div class="buttons ui-fade">
-          <button type="button" data-toggle="modal" data-target="#modalInstructions01" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#third-block" class="btn btn-pink uppercase">Quiero jugar</a>
+          <button type="button" data-toggle="modal" data-target="#modalInstructions01" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#modalInvite" data-toggle="modal" class="btn btn-pink uppercase">Quiero jugar</a>
         </div>
       </div>
       <div class="col-xs-6 col-xs-offset-3"><img id="hearth" src="assets/images/hearth.png" alt=""></div>
@@ -155,14 +209,14 @@
       <div class="carousel-inner">
         <div class="item active">
           <div class="col-xs-2 col-sm-3 avatar-left">
-            <div style="background-image:url('assets/images/avatar-girl2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/laura.jpg');" class="img img-circle"></div>
           </div>
           <div class="col-xs-10 col-sm-6">
             <div role="tooltip" class="popover fade right in show">
               <div class="arrow"></div>
               <div class="popover-content">
                 <div class="row">
-                  <p> <span>Laura </span>está jugando a <span>STAR MATCH SAGA</span></p>
+                  <p> <span>Laura </span>está jugando a <span>Star Match Saga</span></p>
                   <div class="table-cell">
                     <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
                   </div>
@@ -179,7 +233,7 @@
               <div class="popover-content">
                 <div class="row">
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/laura.jpg');" class="img img-circle"></div>
                   </div>
                   <p> <span>Carlos </span>ha conseguido 1000 puntos: descubre la foto de <span>Laura</span></p>
                 </div>
@@ -187,21 +241,132 @@
             </div>
           </div>
           <div class="col-xs-2 col-sm-3 avatar-right">
-            <div style="background-image:url('assets/images/avatar-boy2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/carlos.jpg');" class="img img-circle"></div>
           </div>
         </div>
-        <div class="item active">
+        <div class="item">
           <div class="col-xs-2 col-sm-3 avatar-left">
-            <div style="background-image:url('assets/images/avatar-girl2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/laura.jpg');" class="img img-circle"></div>
           </div>
           <div class="col-xs-10 col-sm-6">
             <div role="tooltip" class="popover fade right in show">
               <div class="arrow"></div>
               <div class="popover-content">
                 <div class="row">
-                  <p> <span>Laura </span>ha desbloqueado un nuevo pretendiente <span>CARLOS</span></p>
+                  <p> <span>Laura </span>ha desbloqueado un nuevo pretendiente <span>Carlos</span></p>
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/carlos.jpg');" class="img img-circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-0 col-sm-3 avatar-left"></div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade left in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/laura.jpg');" class="img img-circle"></div>
+                  </div>
+                  <p> <span>Carlos </span>invita a chatear con él a <span>Laura</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-sm-3 avatar-right">
+            <div style="background-image:url('assets/images/carlos.jpg');" class="img img-circle"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-2 col-sm-3 avatar-left">
+            <div style="background-image:url('assets/images/laura.jpg');" class="img img-circle"></div>
+          </div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade right in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <p> <span>Laura </span>acepta chatear con <span>Carlos</span></p>
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/carlos.jpg');" class="img img-circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-0 col-sm-3 avatar-left"></div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade left in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/screen-03.jpg');" class="img img-circle"></div>
+                  </div>
+                  <p> <span>Ana </span>ha pasado de nivel en <span>Colour Palette.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-sm-3 avatar-right">
+            <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-2 col-sm-3 avatar-left">
+            <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
+          </div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade right in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <p> <span>Miguel </span>ha completado un puzzle y ahora sabe qué música le gusta a <span>Ana</span></p>
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/screen-01.jpg');" class="img img-circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-0 col-sm-3 avatar-left"></div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade left in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
+                  </div>
+                  <p> <span>Ana </span>ha desbloqueado un nuevo pretendiente: <span>Miguel</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-2 col-sm-3 avatar-right">
+            <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-2 col-sm-3 avatar-left">
+            <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
+          </div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade right in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <p> <span>Miguel </span>le envía un guiño a <span>Ana</span></p>
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
                   </div>
                 </div>
               </div>
@@ -218,27 +383,27 @@
                   <div class="table-cell">
                     <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
                   </div>
-                  <p> <span>Carlos </span>Carlos invita a Laura a chatear con él.</p>
+                  <p> <span>Ana </span>gasta 500 puntos para saber en qué trabaja <span>Miguel</span></p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xs-2 col-sm-3 avatar-right">
-            <div style="background-image:url('assets/images/avatar-boy2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
           </div>
         </div>
         <div class="item">
           <div class="col-xs-2 col-sm-3 avatar-left">
-            <div style="background-image:url('assets/images/avatar-girl2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
           </div>
           <div class="col-xs-10 col-sm-6">
             <div role="tooltip" class="popover fade right in show">
               <div class="arrow"></div>
               <div class="popover-content">
                 <div class="row">
-                  <p> <span>Laura acepta chatear con Carlos.</span></p>
+                  <p> <span>Miguel </span>reta a  <span>Ana </span>a jugar a <span>Question Challenge</span></p>
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/iphone-game.jpg');" class="img img-circle"></div>
                   </div>
                 </div>
               </div>
@@ -253,29 +418,29 @@
               <div class="popover-content">
                 <div class="row">
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
                   </div>
-                  <p> <span>Ana ha pasado de nivel en Colour Palette.</span></p>
+                  <p> <span>Ana </span>acepta el reto de  <span>Miguel</span></p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xs-2 col-sm-3 avatar-right">
-            <div style="background-image:url('assets/images/avatar-boy2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
           </div>
         </div>
         <div class="item">
           <div class="col-xs-2 col-sm-3 avatar-left">
-            <div style="background-image:url('assets/images/avatar-girl2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
           </div>
           <div class="col-xs-10 col-sm-6">
             <div role="tooltip" class="popover fade right in show">
               <div class="arrow"></div>
               <div class="popover-content">
                 <div class="row">
-                  <p> <span>Miguel ha completado un puzzle y ahora sabe qué música le gusta a Ana</span></p>
+                  <p> <span>Miguel </span>gana el reto y descubre la foto de <span>Ana </span></p>
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
                   </div>
                 </div>
               </div>
@@ -290,15 +455,33 @@
               <div class="popover-content">
                 <div class="row">
                   <div class="table-cell">
-                    <div style="background-image:url('assets/images/star-screen.jpg');" class="img img-circle"></div>
+                    <div style="background-image:url('assets/images/iphone-game.jpg');" class="img img-circle"></div>
                   </div>
-                  <p> <span>Ana ha desbloqueado un nuevo pretendiente: Miguel.</span></p>
+                  <p> <span>Ana </span>invita a chatear con ella a <span>Miguel</span></p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-xs-2 col-sm-3 avatar-right">
-            <div style="background-image:url('assets/images/avatar-boy2.jpg');" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="col-xs-2 col-sm-3 avatar-left">
+            <div style="background-image:url('assets/images/miguel.jpg');" class="img img-circle"></div>
+          </div>
+          <div class="col-xs-10 col-sm-6">
+            <div role="tooltip" class="popover fade right in show">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <div class="row">
+                  <p> <span>Miguel </span>acepta la cita de <span>Ana </span></p>
+                  <div class="table-cell">
+                    <div style="background-image:url('assets/images/ana.jpg');" class="img img-circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -322,7 +505,7 @@
         <p>Sube de nivel, acumula logros y desbloquea recompensas que tus pretendientes valorarán.</p>
       </div>
       <div class="col-sm-12">
-        <p class="small">¿Tienes más dudas? Consulta nuestra sección de <span>preguntas frecuentes.</span></p>
+        <p class="small">¿Tienes más dudas? <span data-toggle="modal" data-target="#modalInstructions01">consulta nuestro tutorial.</span></p>
       </div>
     </div>
   </div>

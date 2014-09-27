@@ -1,13 +1,12 @@
 .modal.fade#modalSuccess(tabindex="-1",role="dialog", aria-labelledby="myModalLabel",aria-hidden="true")
   .modal-dialog
     .modal-content
-      .modal-header
+      .modal-header.background-size(style="background-image:url('assets/images/lovster-bckg.jpg');")
         button.close(type='button', data-dismiss='modal')
           span(aria-hidden='true') ×
           span.sr-only Cerrar
-        .img.img-circle(style="background-image:url('assets/images/screen-02.jpg');")
       .modal-body
-        h3 Gracias por registrarte en Lovster
-        p Te has apuntado correctamente a la lista de espera de Lovster. Cuando bla bla bla bla bla
+        h3 ¡Gracias!
+        p Te hemos incluido en la lista de espera de usuarios de Lovster. En cuanto nuestra plataforma esté disponible o tengamos novedades te enviaremos un email para avisarte.
       .modal-footer
-        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Entendido, cierra esto
+        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') ¡Entendido!
