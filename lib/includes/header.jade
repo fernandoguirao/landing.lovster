@@ -4,8 +4,8 @@ nav.navbar.navbar-default.navbar-fixed-top.ui-fade(role="navigation")
       a.navbar-brand.bone-font Lovster
     ul.nav.navbar-nav.navbar-right
       li.hidden-xs
-        a.bone-font(href="#modalInstructions01",data-toggle="modal") Cómo funciona
+        a.bone-font(href="#modalInstructions01",data-toggle="modal",onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);") Cómo funciona
       li
-        a.btn.btn-pink.btn-lg(href="#modalInvite",data-toggle="modal")
+        a.btn.btn-pink.btn-lg(href="#modalInvite",data-toggle="modal", onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);")
           span.hidden-xs Quiero jugar, invítame
           span.visible-xs-block Quiero jugar

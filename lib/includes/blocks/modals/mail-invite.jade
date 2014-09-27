@@ -18,7 +18,7 @@
               .hidden-from-view.hidden
                 input(type='text', name='honeypot', tabindex='-1', value='')
               .submit_container.clear
-                button.btn.pull-right.btn-pink(type='submit', name='submit') Quiero jugar
+                button.btn.pull-right.btn-pink(type='submit', name='submit',onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Inside modal']);") Quiero jugar
                 .clearfix
               .row
                 button.btn.not-btn.pull-right.btn-default(data-dismiss='modal') De momento no, cancelar

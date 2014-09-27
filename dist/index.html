@@ -7,6 +7,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/app.css">
+    <script>
+      var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-55212454-1']);
+        _gaq.push(['_trackPageview']);
+      
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
   </head>
   <body><!--[if lt IE 8]>
     <p class="browsehappy">
@@ -20,8 +31,8 @@
   <div class="container">
     <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
     <ul class="nav navbar-nav navbar-right">
-      <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" class="bone-font">Cómo funciona</a></li>
-      <li><a href="#modalInvite" data-toggle="modal" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></a></li>
+      <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);" class="bone-font">Cómo funciona</a></li>
+      <li><a href="#modalInvite" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></a></li>
     </ul>
   </div>
 </nav>
@@ -88,7 +99,7 @@
         <p>Rellena tu perfil y personaliza tu avatar entre multitud de opciones. Tu perfil estará oculto, mostrándose a medida que tus pretendientes superen niveles en el juego.</p>
       </div>
       <div class="modal-footer">
-        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" class="btn btn-primary btn-lg">Siguiente</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 1 a 2','Pasos modal']);" class="btn btn-primary btn-lg">) Siguiente</button>
       </div>
     </div>
   </div>
@@ -105,7 +116,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions01" class="btn btn-default btn-lg">Atrás</button>
-        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions03" class="btn btn-primary btn-lg">Siguiente</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions03" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 2 a 3','Pasos modal']);" class="btn btn-primary btn-lg">Siguiente</button>
       </div>
     </div>
   </div>
@@ -123,7 +134,7 @@
       <div class="modal-footer">
         <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" class="btn btn-default btn-lg">Atrás</button>
         <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
-        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInvite" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
+        <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInvite" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Paso 3 cómo funciona','Modal']);" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
       </div>
     </div>
   </div>
@@ -150,7 +161,7 @@
                 <input type="text" name="honeypot" tabindex="-1" value="">
               </div>
               <div class="submit_container clear">
-                <button type="submit" name="submit" class="btn pull-right btn-pink">Quiero jugar</button>
+                <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Inside modal']);" class="btn pull-right btn-pink">Quiero jugar</button>
                 <div class="clearfix"></div>
               </div>
               <div class="row">
@@ -198,14 +209,14 @@
         <h1 id="title-2" class="scale-fade-animation">Diviértete</h1>
         <h4 class="ui-fade">Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
         <div class="buttons ui-fade">
-          <button type="button" data-toggle="modal" data-target="#modalInstructions01" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#modalInvite" data-toggle="modal" class="btn btn-pink uppercase">Quiero jugar</a>
+          <button type="button" data-toggle="modal" data-target="#modalInstructions01" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#modalInvite" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);" class="btn btn-pink uppercase">Quiero jugar</a>
         </div>
       </div>
       <div class="col-xs-6 col-xs-offset-3"><img id="hearth" src="assets/images/hearth.png" alt=""></div>
     </div>
   </div>
   <div id="notifications" class="row ui-fade">
-    <div data-ride="carousel" class="carousel slide carousel-fade">
+    <div data-ride="carousel" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Carousel','Section 01']);" class="carousel slide carousel-fade">
       <div class="carousel-inner">
         <div class="item active">
           <div class="col-xs-2 col-sm-3 avatar-left">
@@ -493,19 +504,19 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div style="background-image:url('assets/images/screen-01.jpg');" class="img img-circle"></div>
+        <div style="background-image:url('assets/images/screen-01.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen01','Section 02']);" class="img img-circle"></div>
         <p>Elige un juego y gana puntos para desbloquear pretendientes.</p>
       </div>
       <div class="col-sm-4">
-        <div style="background-image:url('assets/images/screen-02.jpg');" class="img img-circle"></div>
+        <div style="background-image:url('assets/images/screen-02.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen02','Section 02']);" class="img img-circle"></div>
         <p>Los juegos de pareja te permitirán descubrir afinidades y seducir a tus conquistas.</p>
       </div>
       <div class="col-sm-4">
-        <div style="background-image:url('assets/images/screen-03.jpg');" class="img img-circle"></div>
+        <div style="background-image:url('assets/images/screen-03.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen03','Section 02']);" class="img img-circle"></div>
         <p>Sube de nivel, acumula logros y desbloquea recompensas que tus pretendientes valorarán.</p>
       </div>
       <div class="col-sm-12">
-        <p class="small">¿Tienes más dudas? <span data-toggle="modal" data-target="#modalInstructions01">consulta nuestro tutorial.</span></p>
+        <p class="small">¿Tienes más dudas? <span data-toggle="modal" data-target="#modalInstructions01" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Sección 02']);">consulta nuestro tutorial.</span></p>
       </div>
     </div>
   </div>
@@ -537,7 +548,7 @@
             <input type="text" name="honeypot" tabindex="-1" value="">
           </div>
           <div class="submit_container clear">
-            <button type="submit" name="submit" class="btn btn-block btn-pink">Quiero jugar</button>
+            <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Sección 03']);" class="btn btn-block btn-pink">) Quiero jugar</button>
           </div>
         </form>
       </div>
@@ -557,12 +568,3 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/retina.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
-  ga('create', 'UA-55199592-1', 'auto');
-  ga('send', 'pageview');
-</script>

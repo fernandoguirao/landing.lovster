@@ -2,14 +2,14 @@
   .container
     .row
       .col-sm-4
-        .img.img-circle(style="background-image:url('assets/images/screen-01.jpg');")
+        .img.img-circle(style="background-image:url('assets/images/screen-01.jpg');",onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen01','Section 02']);")
         p Elige un juego y gana puntos para desbloquear pretendientes.
       .col-sm-4
-        .img.img-circle(style="background-image:url('assets/images/screen-02.jpg');")
+        .img.img-circle(style="background-image:url('assets/images/screen-02.jpg');",onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen02','Section 02']);")
         p Los juegos de pareja te permitirán descubrir afinidades y seducir a tus conquistas.
       .col-sm-4
-        .img.img-circle(style="background-image:url('assets/images/screen-03.jpg');")
+        .img.img-circle(style="background-image:url('assets/images/screen-03.jpg');",onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen03','Section 02']);")
         p Sube de nivel, acumula logros y desbloquea recompensas que tus pretendientes valorarán.
       .col-sm-12
         p.small ¿Tienes más dudas? 
-          span(data-toggle="modal",data-target="#modalInstructions01") consulta nuestro tutorial.
+          span(data-toggle="modal",data-target="#modalInstructions01",onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Sección 02']);") consulta nuestro tutorial.

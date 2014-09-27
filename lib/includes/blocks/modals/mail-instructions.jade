@@ -9,7 +9,7 @@
         h3 Primer paso
         p Rellena tu perfil y personaliza tu avatar entre multitud de opciones. Tu perfil estará oculto, mostrándose a medida que tus pretendientes superen niveles en el juego.
       .modal-footer
-        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions02') Siguiente
+        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions02',onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 1 a 2','Pasos modal']);")) Siguiente
 
 .modal.fade.instructions#modalInstructions02(tabindex="-1",role="dialog", aria-labelledby="myModalLabel",aria-hidden="true")
   .modal-dialog
@@ -23,7 +23,7 @@
         p Elige un juego, hay muchos entre los que escoger. Juega para acumular puntos y desbloquear pretendientes, o para descubrir algo de alguien.
       .modal-footer
         button.btn.btn-default.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions01') Atrás
-        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions03') Siguiente
+        button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions03',onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 2 a 3','Pasos modal']);") Siguiente
 
 .modal.fade.instructions#modalInstructions03(tabindex="-1",role="dialog", aria-labelledby="myModalLabel",aria-hidden="true")
   .modal-dialog
@@ -38,4 +38,4 @@
       .modal-footer
         button.btn.btn-default.btn-lg(type='button', data-dismiss='modal', data-toggle='modal',data-target='#modalInstructions02') Atrás
         button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Entendido, cierra esto
-        button.btn.btn-pink.btn-lg(type='button', data-dismiss='modal',data-toggle='modal',data-target='#modalInvite') Quiero jugar, invítame
+        button.btn.btn-pink.btn-lg(type='button', data-dismiss='modal',data-toggle='modal',data-target='#modalInvite',onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Paso 3 cómo funciona','Modal']);") Quiero jugar, invítame
