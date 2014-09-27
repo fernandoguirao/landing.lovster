@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html class="no-js">
   <head>
+    <title>Lovster, play the game</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="CACHE-CONTROL" content="Private">
+    <meta name="ROBOTS" content="ALL">
+    <meta name="description" content="Lovster es una plataforma de juegos donde el premio es encontrar pareja">
+    <meta rel="canonical" href="http://www.lovster.co">
+    <meta name="keywords" content="juegos, pareja, citas">
+    <meta name="author" content="Lovster">
+    <meta property="og:title" content="Lovster: play the game">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="http://www.lovster.co/assets/images/lovster-bckg.jpg">
+    <meta property="og:description" content="Lovster es una plataforma de juegos donde el premio es encontrar pareja">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lovster, play the game">
+    <meta name="twitter:image" content="http://www.lovster.co/assets/images/lovster-bckg.jpg">
+    <meta name="twitter:description" content="Lovster es una plataforma de juegos donde el premio es encontrar pareja">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/css/app.css">
     <script>
-      var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-55212454-1']);
-        _gaq.push(['_trackPageview']);
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        ga('create', 'UA-55212454-1', 'auto');
+        ga('send', 'pageview');
     </script>
+    <script>
+      (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+      var fbds = document.createElement('script');
+      fbds.async = true;
+      fbds.src = '//connect.facebook.net/en_US/fbds.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(fbds, s);
+      _fbq.loaded = true;
+      }
+      })();
+      window._fbq = window._fbq || [];
+      window._fbq.push(['track', '6018060939327', {'value':'0.01','currency':'EUR'}]);
+      
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6018060939327&amp;amp;cd[value]=0.01&amp;amp;cd[currency]=EUR&amp;amp;noscript=1"></noscript>
   </head>
   <body><!--[if lt IE 8]>
     <p class="browsehappy">
@@ -29,7 +60,7 @@
         <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
         <ul class="nav navbar-nav navbar-right">
           <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);" class="bone-font">Cómo funciona</a></li>
-          <li><a href="#modalInvite" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);" class="btn btn-pink btn-lg"><span class="hidden-xs">Quiero jugar, invítame</span><span class="visible-xs-block">Quiero jugar</span></a></li>
+          <li><a id="helpbtn" href="#modalEncuesta" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Necesitamos tu ayuda', 'Ayuda abre modal','Top bar']);" class="btn btn-pink btn-lg"><span class="hidden-xs">¡Necesitamos tu ayuda!</span><span class="visible-xs-block">¡Ayúdanos!</span></a></li>
         </ul>
       </div>
     </nav>
@@ -96,7 +127,7 @@
             <p>Rellena tu perfil y personaliza tu avatar entre multitud de opciones. Tu perfil estará oculto, mostrándose a medida que tus pretendientes superen niveles en el juego.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 1 a 2','Pasos modal']);" class="btn btn-primary btn-lg">) Siguiente</button>
+            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 1 a 2','Pasos modal']);" class="btn btn-primary btn-lg">Siguiente</button>
           </div>
         </div>
       </div>
@@ -167,6 +198,22 @@
                 </form>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modalEncuesta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div style="background-image:url('assets/images/lovster-bckg.jpg');" class="modal-header background-size">
+            <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+          </div>
+          <div class="modal-body">
+            <h3>Necesitamos tu ayuda!</h3>
+            <p>Para que Lovster sea exactamente como te gustaría hemos preparado una encuesta muy divertida y muy breve. ¿Quieres ayudarnos a mejorar con tu opinión?</p><a href="http://bit.ly/1tHH48K" target="_blank" onClick="_gaq.push(['_trackEvent', 'Necesitamos tu ayuda', 'Enlace','Inside modal']);" class="btn btn-lg btn-pink">¡Sí, quiero ayudaros!</a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary btn-sm">No me interesa, cierra esto</button>
           </div>
         </div>
       </div>
@@ -545,7 +592,7 @@
                 <input type="text" name="honeypot" tabindex="-1" value="">
               </div>
               <div class="submit_container clear">
-                <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Sección 03']);" class="btn btn-block btn-pink">) Quiero jugar</button>
+                <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Sección 03']);" class="btn btn-block btn-pink">Quiero jugar</button>
               </div>
             </form>
           </div>

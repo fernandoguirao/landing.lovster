@@ -11,6 +11,7 @@
 }
 .pace-done {
   .lh-keyframes(~'latir, 0%{ transform: scale(.95); } 100%{ transform: scale(1); }');
+  .lh-keyframes(~'latir2, 0%{ transform: scale(1); } 10%{ transform: scale(.90); } 20%{ transform: scale(1); }');
   .lh-keyframes(~'hearthin, 0%{ transform: scale(.4); opacity:0; } 100%{ transform: scale(.95); opacity:1; }');
   .lh-keyframes(~'fadein, 0%{ opacity:0; transform: scale(.9); } 100%{ opacity:1;transform: scale(1); }');
   .lh-keyframes(~'globan, 0%{ opacity:0; transform: scale(.9); } 100%{ opacity:.2;transform: scale(1); }');
@@ -31,6 +32,10 @@
   #hearth {
     .opacity(0);
    .lh-animation(hearthin 1s 2s  cubic-bezier(.92,.22,.74,.84) forwards, latir 1s 2s cubic-bezier(0.5, 0.2, 0.3, 1.0) infinite alternate);
+  }
+
+  #helpbtn {
+    .lh-animation(latir2 5s 0s cubic-bezier(0.5, 0.2, 0.3, 1.0) infinite alternate);
   }
 
   .globus {
