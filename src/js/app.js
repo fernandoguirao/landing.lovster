@@ -18,9 +18,15 @@ var getemail = getParameterByName('register');
 
 if (getemail == 'success'){
 	$('#modalSuccess').modal('toggle');
+  Pace.stop();
+  $('body').addClass('pace-done');
+  $('body').removeClass('pace-running');
 }
 
 if (getemail == 'fail'){
 	$('#modalFail').modal('toggle');
+  Pace.stop();
+  $('body').addClass('pace-done');
+  $('body').removeClass('pace-running');
 }
 
