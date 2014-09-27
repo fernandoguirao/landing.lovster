@@ -1,13 +1,23 @@
-include ./includes/head.jade
-include ./includes/header.jade
+doctype
+html.no-js
+  include ./includes/head.jade
+  body
+    <!--[if lt IE 8]>
+    p.browsehappy
+      | Estás usando un navegador muy desactualizado.
+      | Por favor, 
+      a(href="http://browsehappy.com/") actualiza tu navegador 
+      | para mejorar tu experiencia en internet. Gracias.
+    <![endif]-->
+    include ./includes/header.jade
 
-include ./includes/blocks/modals/mail-success.jade
-include ./includes/blocks/modals/mail-fail.jade
-include ./includes/blocks/modals/mail-instructions.jade
-include ./includes/blocks/modals/mail-invite.jade
+    include ./includes/blocks/modals/mail-success.jade
+    include ./includes/blocks/modals/mail-fail.jade
+    include ./includes/blocks/modals/mail-instructions.jade
+    include ./includes/blocks/modals/mail-invite.jade
 
-include ./includes/blocks/first-block.jade
-include ./includes/blocks/second-block.jade
-include ./includes/blocks/third-block.jade
+    include ./includes/blocks/first-block.jade
+    include ./includes/blocks/second-block.jade
+    include ./includes/blocks/third-block.jade
 
-include ./includes/foot.jade
+    include ./includes/foot.jade
