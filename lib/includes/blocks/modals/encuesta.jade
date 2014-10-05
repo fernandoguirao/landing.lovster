@@ -8,6 +8,7 @@
       .modal-body
         h3 Necesitamos tu ayuda!
         p Para que Lovster sea exactamente como te gustaría hemos preparado una encuesta muy divertida y muy breve. ¿Quieres ayudarnos a mejorar con tu opinión?
-        a.btn.btn-lg.btn-pink(href="http://bit.ly/1tHH48K",target="_blank",onClick="_gaq.push(['_trackEvent', 'Necesitamos tu ayuda', 'Enlace','Inside modal']);") ¡Sí, quiero ayudaros!
+        a.btn.btn-lg.btn-pink(href="http://bit.ly/1tHH48K",target="_blank",onClick="ga('send', 'event',  'Go encuesta', 'Enlace','Inside modal');") ¡Sí, quiero ayudaros!
       .modal-footer
         button.btn.btn-primary.btn-sm(type='button', data-dismiss='modal') No me interesa, cierra esto
+img.hidden(src="assets/images/lovster-bckg.jpg")

@@ -1,5 +1,5 @@
 .row#notifications.ui-fade
-        .carousel.slide.carousel-fade(data-ride="carousel",onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Carousel','Section 01']);")
+        .carousel.slide.carousel-fade(data-ride="carousel",onClick="ga('send', 'event',  'Otros elementos', 'Carousel','Section 01');")
           .carousel-inner
             .item.active
               .col-xs-2.col-sm-3.avatar-left

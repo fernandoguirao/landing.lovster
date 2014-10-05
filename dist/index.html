@@ -59,8 +59,8 @@
       <div class="container">
         <div class="navbar-header"><a class="navbar-brand bone-font">Lovster</a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);" class="bone-font">Cómo funciona</a></li>
-          <li><a id="helpbtn" href="#modalEncuesta" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Necesitamos tu ayuda', 'Ayuda abre modal','Top bar']);" class="btn btn-pink btn-lg"><span class="hidden-xs">¡Necesitamos tu ayuda!</span><span class="visible-xs-block">¡Ayúdanos!</span></a></li>
+          <li class="hidden-xs"><a href="#modalInstructions01" data-toggle="modal" onClick="ga('send', 'event',  'Cómo funciona', 'Cómo funciona abre modal','Top bar');" class="bone-font">Cómo funciona</a></li>
+          <li><a id="helpbtn" href="#modalEncuesta" data-toggle="modal" onClick="ga('send', 'event',  'Necesitamos tu ayuda', 'Ayuda abre modal','Top bar');" class="btn btn-pink btn-lg"><span class="hidden-xs">¡Necesitamos tu ayuda!</span><span class="visible-xs-block">¡Ayúdanos!</span></a></li>
         </ul>
       </div>
     </nav>
@@ -127,7 +127,7 @@
             <p>Rellena tu perfil y personaliza tu avatar entre multitud de opciones. Tu perfil estará oculto, mostrándose a medida que tus pretendientes superen niveles en el juego.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 1 a 2','Pasos modal']);" class="btn btn-primary btn-lg">Siguiente</button>
+            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" onClick="ga('send', 'event',  'Cómo funciona', 'Paso 1 a 2','Pasos modal');" class="btn btn-primary btn-lg">Siguiente</button>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions01" class="btn btn-default btn-lg">Atrás</button>
-            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions03" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Paso 2 a 3','Pasos modal']);" class="btn btn-primary btn-lg">Siguiente</button>
+            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions03" onClick="ga('send', 'event',  'Cómo funciona', 'Paso 2 a 3','Pasos modal');" class="btn btn-primary btn-lg">Siguiente</button>
           </div>
         </div>
       </div>
@@ -162,11 +162,11 @@
           <div class="modal-footer">
             <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInstructions02" class="btn btn-default btn-lg">Atrás</button>
             <button type="button" data-dismiss="modal" class="btn btn-primary btn-lg">Entendido, cierra esto</button>
-            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInvite" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Paso 3 cómo funciona','Modal']);" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
+            <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#modalInvite" onClick="ga('send', 'event',  'Quiero jugar', 'Paso 3 cómo funciona','Modal');" class="btn btn-pink btn-lg">Quiero jugar, invítame</button>
           </div>
         </div>
       </div>
-    </div>
+    </div><img src="assets/images/faces.jpg" class="hidden"><img src="assets/images/games.jpg" class="hidden"><img src="assets/images/fotos.jpg" class="hidden">
     <div id="modalInvite" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -189,7 +189,7 @@
                     <input type="text" name="honeypot" tabindex="-1" value="">
                   </div>
                   <div class="submit_container clear">
-                    <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Inside modal']);" class="btn pull-right btn-pink">Quiero jugar</button>
+                    <button type="submit" name="submit" onClick="ga('send', 'event',  'Quiero jugar', 'Quiero jugar envía form','Inside modal');" class="btn pull-right btn-pink">Quiero jugar</button>
                     <div class="clearfix"></div>
                   </div>
                   <div class="row">
@@ -210,14 +210,14 @@
           </div>
           <div class="modal-body">
             <h3>Necesitamos tu ayuda!</h3>
-            <p>Para que Lovster sea exactamente como te gustaría hemos preparado una encuesta muy divertida y muy breve. ¿Quieres ayudarnos a mejorar con tu opinión?</p><a href="http://bit.ly/1tHH48K" target="_blank" onClick="_gaq.push(['_trackEvent', 'Necesitamos tu ayuda', 'Enlace','Inside modal']);" class="btn btn-lg btn-pink">¡Sí, quiero ayudaros!</a>
+            <p>Para que Lovster sea exactamente como te gustaría hemos preparado una encuesta muy divertida y muy breve. ¿Quieres ayudarnos a mejorar con tu opinión?</p><a href="http://bit.ly/1tHH48K" target="_blank" onClick="ga('send', 'event',  'Go encuesta', 'Enlace','Inside modal');" class="btn btn-lg btn-pink">¡Sí, quiero ayudaros!</a>
           </div>
           <div class="modal-footer">
             <button type="button" data-dismiss="modal" class="btn btn-primary btn-sm">No me interesa, cierra esto</button>
           </div>
         </div>
       </div>
-    </div>
+    </div><img src="assets/images/lovster-bckg.jpg" class="hidden">
     <main id="first-block">
       <div class="sky">
         <div class="stars"></div>
@@ -253,14 +253,14 @@
             <h1 id="title-2" class="scale-fade-animation">Diviértete</h1>
             <h4 class="ui-fade">Lovster es una plataforma de juegos<br>donde el premio es encontrar pareja</h4>
             <div class="buttons ui-fade">
-              <button type="button" data-toggle="modal" data-target="#modalInstructions01" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#modalInvite" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);" class="btn btn-pink uppercase">Quiero jugar</a>
+              <button type="button" data-toggle="modal" data-target="#modalInstructions01" onClick="ga('send', 'event',  'Cómo funciona', 'Cómo funciona abre modal','Top bar');" class="btn btn-bordered uppercase">Cómo funciona</button><a href="#modalInvite" data-toggle="modal" onClick="ga('send', 'event',  'Quiero jugar', 'Quiero jugar abre modal','Top bar');" class="btn btn-pink uppercase">Quiero jugar</a>
             </div>
           </div>
           <div class="col-xs-6 col-xs-offset-3"><img id="hearth" src="assets/images/hearth.png" alt=""></div>
         </div>
       </div>
       <div id="notifications" class="row ui-fade">
-        <div data-ride="carousel" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Carousel','Section 01']);" class="carousel slide carousel-fade">
+        <div data-ride="carousel" onClick="ga('send', 'event',  'Otros elementos', 'Carousel','Section 01');" class="carousel slide carousel-fade">
           <div class="carousel-inner">
             <div class="item active">
               <div class="col-xs-2 col-sm-3 avatar-left">
@@ -548,19 +548,19 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <div style="background-image:url('assets/images/screen-01.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen01','Section 02']);" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/screen-01.jpg');" onClick="ga('send', 'event',  'Otros elementos', 'Imagen01','Section 02');" class="img img-circle"></div>
             <p>Elige un juego y gana puntos para desbloquear pretendientes.</p>
           </div>
           <div class="col-sm-4">
-            <div style="background-image:url('assets/images/screen-02.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen02','Section 02']);" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/screen-02.jpg');" onClick="ga('send', 'event',  'Otros elementos', 'Imagen02','Section 02');" class="img img-circle"></div>
             <p>Los juegos de pareja te permitirán descubrir afinidades y seducir a tus conquistas.</p>
           </div>
           <div class="col-sm-4">
-            <div style="background-image:url('assets/images/screen-03.jpg');" onClick="_gaq.push(['_trackEvent', 'Otros elementos', 'Imagen03','Section 02']);" class="img img-circle"></div>
+            <div style="background-image:url('assets/images/screen-03.jpg');" onClick="ga('send', 'event',  'Otros elementos', 'Imagen03','Section 02');" class="img img-circle"></div>
             <p>Sube de nivel, acumula logros y desbloquea recompensas que tus pretendientes valorarán.</p>
           </div>
           <div class="col-sm-12">
-            <p class="small">¿Tienes más dudas? <span data-toggle="modal" data-target="#modalInstructions01" onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Sección 02']);">consulta nuestro tutorial.</span></p>
+            <p class="small">¿Tienes más dudas? <span data-toggle="modal" data-target="#modalInstructions01" onClick="ga('send', 'event',  'Cómo funciona', 'Cómo funciona abre modal','Sección 02');">consulta nuestro tutorial.</span></p>
           </div>
         </div>
       </div>
@@ -592,7 +592,7 @@
                 <input type="text" name="honeypot" tabindex="-1" value="">
               </div>
               <div class="submit_container clear">
-                <button type="submit" name="submit" onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Sección 03']);" class="btn btn-block btn-pink">Quiero jugar</button>
+                <button type="submit" name="submit" onClick="ga('send', 'event',  'Quiero jugar', 'Quiero jugar envía form','Sección 03');" class="btn btn-block btn-pink">Quiero jugar</button>
               </div>
             </form>
           </div>

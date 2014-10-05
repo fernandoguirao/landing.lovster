@@ -32,8 +32,8 @@ main#first-block
           br
           | donde el premio es encontrar pareja
         .buttons.ui-fade
-          button.btn.btn-bordered.uppercase(type="button",data-toggle="modal",data-target="#modalInstructions01", onClick="_gaq.push(['_trackEvent', 'Cómo funciona', 'Cómo funciona abre modal','Top bar']);") Cómo funciona
-          a.btn.btn-pink.uppercase(href="#modalInvite",data-toggle="modal", onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar abre modal','Top bar']);") Quiero jugar
+          button.btn.btn-bordered.uppercase(type="button",data-toggle="modal",data-target="#modalInstructions01", onClick="ga('send', 'event',  'Cómo funciona', 'Cómo funciona abre modal','Top bar');") Cómo funciona
+          a.btn.btn-pink.uppercase(href="#modalInvite",data-toggle="modal", onClick="ga('send', 'event',  'Quiero jugar', 'Quiero jugar abre modal','Top bar');") Quiero jugar
       .col-xs-6.col-xs-offset-3
         img#hearth(src="assets/images/hearth.png",alt="")
   include ./notifications.jade

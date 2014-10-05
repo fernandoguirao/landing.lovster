@@ -29,7 +29,7 @@
           .hidden-from-view.hidden
             input(type='text', name='honeypot', tabindex='-1', value='')
           .submit_container.clear
-            button.btn.btn-block.btn-pink(type='submit', name='submit',onClick="_gaq.push(['_trackEvent', 'Quiero jugar', 'Quiero jugar envía form','Sección 03']);") Quiero jugar
+            button.btn.btn-block.btn-pink(type='submit', name='submit',onClick="ga('send', 'event',  'Quiero jugar', 'Quiero jugar envía form','Sección 03');") Quiero jugar
           
       .col-sm-3.col-r.hidden-xs.hidden-sm
         .logo
